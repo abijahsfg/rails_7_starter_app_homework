@@ -10,7 +10,7 @@
       <%= book.description %>
     </p>
     <div class="justify-end card-actions">
-      <button class="btn btn-secondary">Read Reviews</button>
+      <button class="btn btn-secondary"><%= link_to 'Read Reviews', book_reviews_path(id: book) %></button>
     </div>
   </div>
 </div>
