@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2021_12_21_202903) do
     t.bigint "book_id"
     t.text "review"
     t.string "name"
-    t.integer "rate"
+    t.float "rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_id"], name: "index_book_reviews_on_book_id"

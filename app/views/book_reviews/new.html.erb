@@ -1,4 +1,5 @@
-<h1>New book review</h1>
+<center>
+<h1 style="color: blue"><strong>New book review</strong></h1>
 
 <%= render "form", book_review: @book_review %>
 
@@ -7,3 +8,4 @@
 <div>
   <%= link_to "Back to book reviews", book_reviews_path(id: @current_book_id) %>
 </div>
+</center>

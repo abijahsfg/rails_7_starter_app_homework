@@ -1,3 +1,4 @@
+<center>
 <%= form_with(model: book_review) do |form| %>
   <% if book_review.errors.any? %>
     <div style="color: red">
@@ -27,10 +28,11 @@
 
   <div>
     <%= form.label :rate, style: "display: block" %>
-    <%= form.number_field :rate %>
+    <%= form.number_field :rate, in: 1.0..5.0, step: 0.5 %>
   </div>
 
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+</center>

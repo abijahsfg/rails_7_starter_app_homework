@@ -4,7 +4,7 @@ class CreateBookReviews < ActiveRecord::Migration[7.0]
       t.belongs_to :book, index: true, foreign_key: true
       t.text :review
       t.string :name
-      t.integer :rate
+      t.float :rate
 
       t.timestamps
     end

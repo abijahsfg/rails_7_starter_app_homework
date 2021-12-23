@@ -1,6 +1,12 @@
+<center>
 <p style="color: green"><%= notice %></p>
 
-<h1>Book reviews</h1>
+<h1 style="color: blue"><strong>Book reviews</strong></h1>
+<% reviews = [] %>
+<% @book_reviews.each do |book_review| %>
+  <% reviews.push(book_review.rate) %>
+<% end %>
+<h1 style="color: purple"><strong>Average:</strong> <span style="color: green"><strong><%= "#{reviews.sum / reviews.size} / 5.0" %></strong></span></h1>
 
 <div id="book_reviews">
   <% @book_reviews.each do |book_review| %>
@@ -12,3 +18,4 @@
 </div>
 
 <%= link_to "New book review", new_book_review_path(id: @current_book_id) %>
+</center>
